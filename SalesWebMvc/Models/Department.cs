@@ -15,6 +15,10 @@
             Id = id;
             Name = name;
         }
+        public Department(string name)
+        {
+            Name = name;
+        }
 
         public void AddSeller(Seller seller)
         {

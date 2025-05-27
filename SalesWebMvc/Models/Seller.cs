@@ -23,6 +23,14 @@
             BaseSalary = baseSalary;
             Department = department;
         }
+        public Seller(string name, string email, DateTime birthDay, double baseSalary, Department department)
+        {
+            Name = name;
+            Email = email;
+            BirthDay = birthDay;
+            BaseSalary = baseSalary;
+            Department = department;
+        }
 
         public void AddSales(SalesRecord sr)
         {
