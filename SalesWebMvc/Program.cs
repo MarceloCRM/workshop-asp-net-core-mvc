@@ -13,9 +13,11 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
+builder.Services.AddScoped<SalesRecordService>();
 builder.Services.AddScoped<SeedingService>();
 builder.Services.AddScoped<SellerService>();
 builder.Services.AddScoped<DepartmentService>();
+
 
 var app = builder.Build();
 
