@@ -1,6 +1,102 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Sobre Mim";
+    Layout = null;
 }
-<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim - Marcelo Cauan Rodrigues de Moura</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-flatly.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SalesWebMvc.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
 
-<p>Use this page to detail your site's privacy policy.</p>
+        body {
+            background-color: #f7f7f7;
+            text-align: justify;
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1, h2 {
+            color: #333;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <div class="card shadow-sm border-0 mx-auto" style="max-width: 900px;">
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <h2 class="text-primary"><i class="bi bi-person-circle"></i> Marcelo Cauan Rodrigues de Moura</h2>
+                    <p class="mb-1"><i class="bi bi-geo-alt-fill text-primary"></i> Rua Inventada de Teste, 123, Angra dos Reis-RJ</p>
+                    <p class="mb-1">
+                        <i class="bi bi-telephone-fill text-primary"></i> <a href="" class="text-decoration-none text-primary">+55 (01) 23456-7890</a> |
+                        <i class="bi bi-envelope-fill text-primary"></i> <a href="mailto:marcelo.crmoura@gmail.com" class="text-decoration-none text-primary">marcelo.crmoura@gmail.com</a>
+                    </p>
+                    <div class="mt-2">
+                        <a href="https://github.com/marceloCRM" target="_blank" class="btn btn-outline-primary btn-sm me-2"><i class="bi bi-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/marcelo-cauan-rodrigues-de-moura-79ba032a2" target="_blank" class="btn btn-outline-info btn-sm me-2"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                        <a href="~/Currículo para estágio.pdf" target="_blank" class="btn btn-outline-success btn-sm"><i class="bi bi-file-earmark-arrow-down-fill"></i> Currículo</a>
+                    </div>
+                </div>
+
+                <hr />
+
+                <h5 class="text-primary"><i class="bi bi-bullseye"></i> Objetivo Profissional</h5>
+                <p class="text-muted">Sou estudante de Sistemas de Informação, atualmente no 6º período. 
+                    Estou em busca de um estágio para aplicar e expandir meus conhecimentos adquiridos 
+                    ao longo da minha formação acadêmica, especialmente na área de desenvolvimento de software e análise de sistemas.
+                </p>
+
+                <h5 class="text-primary mt-4"><i class="bi bi-mortarboard-fill"></i> Formação Acadêmica</h5>
+                <ul class="text-muted">
+                    <li><strong>Graduação em Sistemas de Informação</strong> - UGB-FERP (Previsão de conclusão: 2026)</li>
+                    <li><strong>Coeficiente de Rendimento Médio:</strong> 9,2</li>
+                </ul>
+
+                <h5 class="text-primary mt-4"><i class="bi bi-lightbulb-fill"></i> Atividades Acadêmicas</h5>
+                <ul class="text-muted">
+                    <li><strong>2023:</strong> "Imersão na rede GPO - Tecnologia de rede de fibra/zamix"</li>
+                    <li><strong>2023:</strong> "Dicas de organização financeira"</li>
+                    <li><strong>2024:</strong> "A revolução do metaverso e da IA na sociedade"</li>
+                    <li><strong>2024:</strong> "Metodologias clássicas e ágeis no gerenciamento de projetos de software - Semana da Ciência e Tecnologia"</li>
+                    <li><strong>2024:</strong> "Benefícios de uma mentalidade de crescimento no ambiente corporativo - Semana da Ciência e Tecnologia"</li>
+                </ul>
+
+                <h5 class="text-primary mt-4"><i class="bi bi-globe2"></i> Cursos Online Realizados</h5>
+                <ul class="text-muted">
+                    <li><strong>HTML e CSS Intermediário</strong> - Dev-Quest</li>
+                    <li><strong>Introdução ao Git e GitHub</strong> - Dev-Quest</li>
+                    <li><strong>C#, ASP.NET Core MVC e Entity Framework</strong> - Nelio Alves (Udemy)</li>
+                </ul>
+
+                <h5 class="text-primary mt-4"><i class="bi bi-translate"></i> Idiomas</h5>
+                <p class="text-muted"><strong>Inglês:</strong> Leitura intermediária e compreensão básica</p>
+
+                <h5 class="text-primary mt-4"><i class="bi bi-tools"></i> Habilidades Técnicas</h5>
+                <ul class="text-muted">
+                    <li><strong>Programação:</strong> Bons conhecimentos em Python, C#, Django, Entity Framework e ASP.NET Core MVC</li>
+                    <li><strong>Ferramentas:</strong> GitHub, Word, Excel, HTML5, CSS3</li>
+                </ul>
+
+                <div class="text-center mt-4">
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">
+                        <i class="bi bi-arrow-left-circle-fill"></i> Voltar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

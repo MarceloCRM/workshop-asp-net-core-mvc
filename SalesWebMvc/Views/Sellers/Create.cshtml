@@ -1,54 +1,62 @@
 ﻿@model SalesWebMvc.Models.ViewModels.SellerFormViewModel
-
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create Seller";
 }
 
-<h2>@ViewData["Title"]</h2>
+<div class="container mt-3 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-1 col-lg-5">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="bi bi-plus-circle-fill"></i> Add New Seller</h5>
+                </div>
+                <div class="card-body pt-2 bg-body-secondary">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
-<h4>Seller</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Seller.Name" class="control-label"></label>
-                <input asp-for="Seller.Name" class="form-control" />
-                <span asp-validation-for="Seller.Name" class="text-danger"></span>
+                        <div class="mb-3">
+                            <label asp-for="Seller.Name" class="form-label"></label>
+                            <input asp-for="Seller.Name" class="form-control" />
+                            <span asp-validation-for="Seller.Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Seller.Email" class="form-label"></label>
+                            <input asp-for="Seller.Email" class="form-control" />
+                            <span asp-validation-for="Seller.Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Seller.BirthDay" class="form-label"></label>
+                            <input asp-for="Seller.BirthDay" class="form-control" type="date" />
+                            <span asp-validation-for="Seller.BirthDay" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Seller.BaseSalary" class="form-label"></label>
+                            <input asp-for="Seller.BaseSalary" class="form-control" />
+                            <span asp-validation-for="Seller.BaseSalary" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Department</label>
+                            <select asp-for="Seller.DepartmentId" asp-items="@(new SelectList(Model.Departments, "Id", "Name"))" class="form-select">
+                                <option value="">Select Department</option>
+                            </select>
+                            <span asp-validation-for="Seller.DepartmentId" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-success">
+                                <i class="bi bi-check-circle-fill"></i> Save
+                            </button>
+                            <a asp-action="Index" class="btn btn-outline-secondary">
+                                <i class="bi bi-arrow-left"></i> Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Seller.Email" class="control-label"></label>
-                <input asp-for="Seller.Email" class="form-control" />
-                <span asp-validation-for="Seller.Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Seller.BirthDay" class="control-label"></label>
-                <input asp-for="Seller.BirthDay" class="form-control" />
-                <span asp-validation-for="Seller.BirthDay" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Seller.BaseSalary" class="control-label"></label>
-                <input asp-for="Seller.BaseSalary" class="form-control" />
-                <span asp-validation-for="Seller.BaseSalary" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Seller.DepartmentId" class="control-label"></label>
-                <select asp-for="Seller.DepartmentId" asp-items="@(new SelectList(Model.Departments, "Id", "Name"))" class="form-control">
-                    <option value="">Select a Department</option>
-                </select>
-            </div>
-            <hr />
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-                <a asp-action="Index" class="btn btn-dark">Back to list</a>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
-
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}
